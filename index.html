@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>SсiFiGame</title>
+  </head>
+  <body>
+    <div class="panel">
+      <p class="status" id="name-pers">Ім'я персонажа</p>
+      <p class="status" id="res-ore">Руда</p>
+      <p class="status" id="res-min">Мінерали</p>
+      <p class="status" id="res-agm">АГМ</p>
+      <button class="logout">Вихід</button>
+    </div>
+    <div class="dashboard">
+      <div class="dashboard-left">
+        <div class="status-bar">
+          <div class="status-bar-in">
+            <h4 id="status-bar">Немає активності...</h4>
+          </div>
+        </div>
+        <details class="dash-tavern">
+          <summary>Будівництво</summary>
+          <div class="dashboard-tavern">
+            <div class="build">
+              <h3 id="comander">Командний центр</h3>
+              <p>Керуюча установа.</p>
+              <div class="cost">
+                <p class="ore-cost" id="ore-comander">12</p>
+                <p class="min-cost" id="min-comander">11</p>
+              </div>
+              <button id="comander-btn">Будувати</button>
+            </div>
+            <div class="build">
+              <h3 id="shipyard-title">Верф</h3>
+              <p>Виробництво кораблів.</p>
+              <div class="cost">
+                <p class="ore-cost" id="ore-shipyard">13</p>
+                <p class="min-cost" id="min-shipyard">16</p>
+              </div>
+              <button id="shipyard" class="default-btn res">Будувати</button>
+            </div>
+            <div class="build">
+              <h3 id="science-title">Науковий корпус</h3>
+              <p>Достідження технологій.</p>
+              <div class="cost">
+                <p class="ore-cost" id="ore-science">12</p>
+                <p class="min-cost" id="min-science">14</p>
+              </div>
+              <button id="science" class="default-btn">Будувати</button>
+            </div>
+            <div class="build">
+              <h3 id="factory-title">Фабрика</h3>
+              <p>Видобуток ресурсів.</p>
+              <div class="cost">
+                <p class="ore-cost" id="ore-factory">17</p>
+                <p class="min-cost" id="min-factory">16</p>
+              </div>
+              <button id="factory" class="default-btn">Будувати</button>
+            </div>
+            <div class="build">
+              <h3 id="radar-title">Радарна станція</h3>
+              <p>Сканування найближчого космосу.</p>
+              <div class="cost">
+                <p class="ore-cost" id="ore-radar">21</p>
+                <p class="min-cost" id="min-radar">19</p>
+              </div>
+              <button id="radar" class="default-btn">Будувати</button>
+            </div>
+            <div class="build">
+              <h3 id="storage-title">Склад</h3>
+              <p>Зберігання ресурсів.</p>
+              <div class="cost">
+                <p class="ore-cost" id="ore-storage">14</p>
+                <p class="min-cost" id="min-storage">13</p>
+              </div>
+              <button id="storage" class="default-btn res-five">
+                Будувати
+              </button>
+            </div>
+            <div class="build">
+              <h3 id="mine-title">Рудні шахти</h3>
+              <p>Видобуток руди.</p>
+              <div class="cost">
+                <p class="ore-cost" id="ore-mine">6</p>
+                <p class="min-cost" id="min-mine">11</p>
+              </div>
+              <button id="mine" class="default-btn res">Будувати</button>
+            </div>
+            <div class="build">
+              <h3 id="collider-title">Антигравітаційний колайдер</h3>
+              <p>Синтез АГМ.</p>
+              <div class="cost">
+                <p class="ore-cost" id="ore-collider">14</p>
+                <p class="min-cost" id="min-collider">17</p>
+              </div>
+              <button id="collider" class="default-btn res">Будувати</button>
+            </div>
+            <div class="build">
+              <h3 id="deposit-title">Мінеральне родовище</h3>
+              <p>Видобуток мінералів.</p>
+              <div class="cost">
+                <p class="ore-cost" id="ore-deposit">11</p>
+                <p class="min-cost" id="min-deposit">6</p>
+              </div>
+              <button id="deposit" class="default-btn res">Будувати</button>
+            </div>
+            <div class="build">
+              <h3 id="plant">Очесний завод</h3>
+              <p>Покращує видобуток ресурсів.</p>
+              <div class="cost">
+                <p class="ore-cost" id="ore-plant">19</p>
+                <p class="min-cost" id="min-plant">17</p>
+              </div>
+              <button id="plant" class="default-btn res-ten">Будувати</button>
+            </div>
+            <div class="build">
+              <h3 id="market-title">Ринок</h3>
+              <p>Торгівля ресурсами.</p>
+              <div class="cost">
+                <p class="ore-cost" id="ore-market">247</p>
+                <p class="min-cost" id="min-market">168</p>
+              </div>
+              <button id="market" class="default-btn btn-fiveten">
+                Будувати
+              </button>
+            </div>
+            <div class="build">
+              <h3 id="station-title">Орбітальна станція</h3>
+              <p>Пришвидшує дослідження.</p>
+              <div class="cost">
+                <p class="ore-cost" id="ore-station">5000</p>
+                <p class="min-cost" id="min-station">3000</p>
+              </div>
+              <button id="station" class="default-btn btn-twofive">
+                Будувати
+              </button>
+            </div>
+          </div>
+        </details>
+        <details class="dash-smithy">
+          <summary>Верф</summary>
+          <div class="dashboard-smithy">
+            <div class="ships">
+              <h3>Нюхач</h3>
+              <p>Дрон-розвідник.</p>
+              <div class="cost">
+                <p class="ore-cost">5</p>
+                <p class="min-cost">5</p>
+                <p class="agm-cost">10</p>
+              </div>
+              <button class="ship-btn">Будувати</button>
+            </div>
+            <div class="ships">
+              <h3>Свист</h3>
+              <p>Корабель з легким озброєнням.</p>
+              <div class="cost">
+                <p class="ore-cost">7</p>
+                <p class="min-cost">5</p>
+                <p class="agm-cost">12</p>
+              </div>
+              <button class="ship-btn">Будувати</button>
+            </div>
+            <div class="ships">
+              <h3>Урук</h3>
+              <p>Корабель-камікадзе.</p>
+              <div class="cost">
+                <p class="ore-cost">4</p>
+                <p class="min-cost">4</p>
+                <p class="agm-cost">16</p>
+              </div>
+              <button class="ship-btn ship-five">Будувати</button>
+            </div>
+            <div class="ships">
+              <h3>Цикада</h3>
+              <p>Збалансований середній корабель.</p>
+              <div class="cost">
+                <p class="ore-cost">11</p>
+                <p class="min-cost">13</p>
+                <p class="agm-cost">18</p>
+              </div>
+              <button class="ship-btn ship-ten">Будувати</button>
+            </div>
+            <div class="ships">
+              <h3>Молот</h3>
+              <p>Корабель для знищення наземних цілей.</p>
+              <div class="cost">
+                <p class="ore-cost">27</p>
+                <p class="min-cost">23</p>
+                <p class="agm-cost">31</p>
+              </div>
+              <button class="ship-btn ship-fiveten">Будувати</button>
+            </div>
+            <div class="ships">
+              <h3>Ярило</h3>
+              <p>Флагман флоту.</p>
+              <div class="cost">
+                <p class="ore-cost">4523</p>
+                <p class="min-cost">6745</p>
+                <p class="agm-cost">9732</p>
+              </div>
+              <button class="ship-btn ship-twofive">Будувати</button>
+            </div>
+          </div>
+        </details>
+        <details class="dash-magic">
+          <summary>Технології</summary>
+          <div class="dashboard-magic">
+            <div class="technology">
+              <h3>Синтез АГМ</h3>
+              <p>Синтез антигравітаційної матерії.</p>
+              <div class="cost">
+                <p class="ore-cost">21</p>
+                <p class="min-cost">25</p>
+                <p class="agm-cost">12</p>
+              </div>
+              <button class="tech-btn">Дослідити</button>
+            </div>
+            <div class="technology">
+              <h3>Кінетична зброя</h3>
+              <p>Легке озброєння.</p>
+              <div class="cost">
+                <p class="ore-cost">25</p>
+                <p class="min-cost">21</p>
+                <p class="agm-cost">13</p>
+              </div>
+              <button class="tech-btn">Дослідити</button>
+            </div>
+            <div class="technology">
+              <h3>Лазерна технологія</h3>
+              <p>Зброя 2-го покоління.</p>
+              <div class="cost">
+                <p class="ore-cost">22</p>
+                <p class="min-cost">23</p>
+                <p class="agm-cost">18</p>
+              </div>
+              <button class="tech-btn">Дослідити</button>
+            </div>
+          </div>
+        </details>
+        <details class="dash-soldier">
+          <summary>Дослідження космосу</summary>
+          <div class="dashboard-soldier">
+            <p>
+              Експедиція відправленна на дослідження глубокого космосу може
+              повернутися із зовсім неочікуванними результатами.
+            </p>
+            <p id="demo-soldier"></p>
+            <button>Відправити експедицію</button>
+          </div>
+        </details>
+        <details class="dash-temp">
+          <summary>Ресурси</summary>
+          <div class="dashboard-temp">
+            <p>Ресурси</p>
+            <p id="demo-temp"></p>
+            <button id="temp-btn" class="dice-roll">Відвідати Собор</button>
+          </div>
+        </details>
+        <details class="dash-quests">
+          <summary>Завдання</summary>
+          <div class="dashboard-quests">
+            <div class="quest">
+              <h3>"Вовки! Вовки!"</h3>
+              <p>
+                Фермери жаліються, що на околицях міста та поблизу полів
+                завелась стая вовків. Допоможіть їм розібратися з цією
+                проблемою.
+              </p>
+              <p id="demo-quest"></p>
+              <button id="quest-btn-one" class="dice-roll quest-btn">
+                Почати Завдання
+              </button>
+            </div>
+            <div class="quest">
+              <h3>"Тілоохоронець"</h3>
+              <p>
+                Місцевий торговець відправляється на ярмарку у сусіднє містечко,
+                та шукає охорону, яка б його супроводжувала.
+              </p>
+              <p id="demo-quest-two">Відкриється на 10 рівні</p>
+              <button id="quest-btn-two" class="dice-roll quest-btn">
+                Почати Завдання
+              </button>
+            </div>
+            <div class="quest">
+              <h3>"Перевертень в мундирі"</h3>
+              <p>
+                Нещодавно було скоєно замах на старосту міста. Все обійшлося,
+                але вбивці вдалося втекти. Ходять чутки, що це міг бути хтось із
+                місцевих. Проведіть розслідування, та знайдіть вбивцю.
+              </p>
+              <p id="demo-quest-three">Відкриється на 25 рівні</p>
+              <button id="quest-btn-three" class="dice-roll quest-btn">
+                Почати Завдання
+              </button>
+            </div>
+            <div class="quest">
+              <h3>"Нескорені вершини"</h3>
+              <p>
+                П'яні мандрівники в таверні розповіли вам про якусь таємничу
+                спільноту, яка проводить дивні ритуали у скельних печерах
+                недалеко від міста. Ви плануєте у всьому розібратись.
+              </p>
+              <p id="demo-quest-four">Відкриється на 50 рівні</p>
+              <button id="quest-btn-four" class="dice-roll quest-btn">
+                Почати Завдання
+              </button>
+            </div>
+          </div>
+        </details>
+      </div>
+      <div class="dashboard-right">
+        <details class="dash-stat" open>
+          <summary>Статистика</summary>
+          <div class="dash-static">
+            <div class="dashboard-stat">
+              <div class="ds-1">
+                <h3>Здоров'я</h3>
+                <h3>Мана</h3>
+                <h3>Персонаж:</h3>
+                <h3>Рівень:</h3>
+                <h3>Досвід:</h3>
+                <h3>Спорядження:</h3>
+                <br />
+                <h3>Золото:</h3>
+              </div>
+              <div class="ds-2">
+                <h3 id="hp">500 / 500</h3>
+                <h3 id="mp">500 / 500</h3>
+                <h3 id="name-pers-stat">Ім'я</h3>
+                <h3 id="lvl-stat">1 рів.</h3>
+                <h3 id="lvl-exp">Досвід до наступного рівня:</h3>
+                <h3 id="equip-str">Міцність спорядження: 100%</h3>
+                <br />
+                <h3 id="gold-stat">Золото:</h3>
+              </div>
+            </div>
+            <div class="stat">
+              <div class="stat-1">
+                <h3>Сила:</h3>
+                <h3>Інтелект:</h3>
+                <h3>Спритність:</h3>
+                <h3>Харизма:</h3>
+                <h3>Удача:</h3>
+                <br />
+                <h3>Атака</h3>
+                <h3>Броня</h3>
+              </div>
+              <div class="stat-2">
+                <h3 id="str">10</h3>
+                <h3 id="int">10</h3>
+                <h3 id="agl">10</h3>
+                <h3 id="hrz">10</h3>
+                <h3 id="lck">10</h3>
+                <br />
+                <h3 id="dmg">120</h3>
+                <h3 id="armor">240</h3>
+              </div>
+            </div>
+          </div>
+        </details>
+        <details class="dash-inventory">
+          <summary>Сканер</summary>
+          <div class="inventory">
+            <div id="inventory-item">Треба: Радарна станція</div>
+          </div>
+        </details>
+        <details class="dash-info">
+          <summary>Інформація</summary>
+          <div class="info"></div>
+        </details>
+      </div>
+    </div>
+    <!-- <div class="progress">
+                <div class="progress-value-hrz"></div>
+              </div> -->
+    <!-- <form class="add">
+      <label for="title">Title:</label>
+      <input type="text" name="title" required />
+      <label for="author">Author:</label>
+      <input type="text" name="author" required />
+
+      <button>Add a new book</button>
+    </form> -->
+
+    <!-- <form class="delete">
+      <label for="id">Document id:</label>
+      <input type="test" name="id" required />
+
+      <button>Delete a book</button>
+    </form>
+
+    <form class="update">
+      <label for="id">Document id:</label>
+      <input type="text" name="id" required />
+
+      <button>Update a book</button>
+    </form> -->
+    <div id="modal" class="modal">
+      <div class="modal-w" id="modal-w">
+        <h2>Звіт</h2>
+        <p id="report">Нічого не відбулось.</p>
+        <button id="report-btn" class="dice-roll">Добре</button>
+      </div>
+    </div>
+
+    <div id="modal-s" class="modal-s">
+      <div class="modal-w-s" id="modal-w-s">
+        <h2>Звіт</h2>
+        <p id="report-s">Нічого не відбулось.</p>
+        <button id="report-btn-s" class="dice-roll">Добре</button>
+      </div>
+    </div>
+
+    <div id="modal-inventory" class="modal">
+      <div class="modal-w" id="modal-w-inventory">
+        <h2>Інвентар</h2>
+        <p>Пусто</p>
+        <button id="inventory-btn" class="dice-roll">Добре</button>
+      </div>
+    </div>
+
+    <div id="signup-form" class="signup-form">
+      <form id="signup" class="signup">
+        <h2 id="alert-signup">Зареєструватися:</h2>
+        <label for="name">Ім'я персонажа:</label>
+        <input type="text" name="name" />
+        <label for="email">Ел.Пошта:</label>
+        <input type="email" name="email" />
+        <label for="password">Пароль:</label>
+        <input type="password" name="password" />
+
+        <button>Реєстрація</button>
+
+        <p>Уже маєте акаунт? <a id="switch-login">Увійти.</a></p>
+      </form>
+    </div>
+    <div id="login-form" class="login-form">
+      <form id="login" class="login">
+        <h2 id="alert-login">Увійти:</h2>
+        <label for="email">Ел.Пошта:</label>
+        <input type="email" name="email" />
+        <label for="password">Пароль:</label>
+        <input type="password" name="password" />
+
+        <button>Увійти</button>
+
+        <p>Ще не маєте акаунта? <a id="switch-signup">Реєстрація.</a></p>
+      </form>
+    </div>
+
+    <!-- <h2>Usubscribing</h2>
+    <button class="unsub">Unsubscribing from ba/auth changes</button> -->
+
+    <script src="bundle.js"></script>
+  </body>
+</html>

@@ -1,0 +1,1158 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: fixed center url(https://images.unsplash.com/photo-1506443432602-ac2fcd6f54e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+}
+
+details {
+  display: flex;
+  margin: 5px;
+  width: 100%;
+  transition: all .5s;
+}
+
+summary {
+  cursor: pointer;
+  padding: 5px;
+  background: linear-gradient(0.25turn, rgb(0, 0, 0), rgba(255, 255, 255, 0));
+  transition: all .5s;
+}
+
+.status-bar {
+  background: center url(https://www.this-is-cool.co.uk/wp-content/uploads/2020/01/the-scifi-art-of-alex-ichim-01.jpg);
+  width: 100%;
+  height: 50px;
+  margin: 5px;
+}
+
+.status-bar-in {
+  background: linear-gradient(0.25turn, rgb(0, 0, 0), rgba(255, 255, 255, 0));
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.status-bar-in h4 {
+  margin: 0;
+}
+
+#res-ore {
+  color: #d07326;
+  font-weight: bold;
+}
+#res-min {
+  color: #d633f7;
+  font-weight: bold;
+}
+#res-agm {
+  color: #11e7dc;
+  font-weight: bold;
+}
+
+.cost {
+  display: flex;
+}
+
+.ore-cost {
+  color: #d07326;
+  margin: 0;
+}
+
+.min-cost {
+  color: #d633f7;
+  margin: 0;
+}
+
+.agm-cost {
+  color: #11e7dc;
+  margin: 0;
+}
+
+.panel {
+    display: flex;
+    background: linear-gradient(rgb(114, 114, 114), rgb(19, 19, 19));
+    justify-content: space-between;
+    align-items: center;
+    height: 25px;
+    position: fixed;
+    z-index: 3;
+    width: 100%;
+}
+
+.logout {
+  background: rgba(0, 0, 0, 0);
+  color: aliceblue;
+  border: none;
+  cursor: pointer;
+}
+
+.status {
+    padding-right: 20px;
+    color: rgb(248, 230, 197);
+    font-size: 15px;
+}
+
+#name-pers {
+  margin-left: 20px;
+}
+
+.main {
+    background-color: rgba(88, 87, 87, 0.8);
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 20px 20px 20px 10px;
+    color: antiquewhite;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+
+.local-btn {
+    background: linear-gradient(rgb(114, 114, 114), rgb(19, 19, 19));
+    color: antiquewhite;
+    width: 100%;
+    height: 25px;
+    border: 1px solid rgb(133, 133, 133);
+    flex: 1;
+    flex-basis: 20%;
+    cursor: pointer;
+}
+
+.local-btn:hover {
+    background: linear-gradient(orange, red);
+}
+
+.local-btn:active {
+    background: linear-gradient(orange, rgb(134, 1, 1));
+    border: 3px solid black;
+}
+
+.l-zone {
+    width: 50%;
+    text-align: center;
+}
+.l-zone p {
+    margin-left: 30px;
+    text-align: left;
+}
+
+.r-zone {
+    width: 50%;
+    text-align: center;
+}
+
+.btn-zone {
+    margin-top: 20px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
+.line-stat {
+    padding-left: 20px;
+}
+
+.progress {
+  background: rgba(255,255,255,0.1);
+  justify-content: flex-start;
+  border-radius: 100px;
+  align-items: center;
+  position: relative;
+  padding: 0 5px;
+  display: flex;
+  height: 20px;
+  width: 300px;
+  margin-top: 22px;
+  margin-left: 10px;
+}
+
+.progress-value {
+  animation: load 3s normal forwards;
+  box-shadow: 0 10px 40px -10px #fff;
+  border-radius: 100px;
+  background: #fff;
+  height: 15px;
+  width: 0;
+}
+
+.progress-value-lck {
+  animation: load-lck 3s normal forwards;
+  box-shadow: 0 10px 40px -10px #fff;
+  border-radius: 100px;
+  background: #fff;
+  height: 15px;
+  width: 0;
+}
+
+@keyframes load-lck {
+  0% { width: 0; }
+  100% { width: 10%; }
+}
+
+.progress-value-hrz {
+  animation: load-hrz 3s normal forwards;
+  box-shadow: 0 10px 40px -10px #fff;
+  border-radius: 100px;
+  background: #fff;
+  height: 15px;
+  width: 0;
+}
+
+@keyframes load-hrz {
+  0% { width: 0; }
+  100% { width: 5%; }
+}
+
+.progress-value-agl {
+  animation: load-agl 3s normal forwards;
+  box-shadow: 0 10px 40px -10px #fff;
+  border-radius: 100px;
+  background: #fff;
+  height: 15px;
+  width: 0;
+}
+
+@keyframes load-agl {
+  0% { width: 0; }
+  100% { width: 5%; }
+}
+
+.progress-value-int {
+  animation: load-int 3s normal forwards;
+  box-shadow: 0 10px 40px -10px #fff;
+  border-radius: 100px;
+  background: #fff;
+  height: 15px;
+  width: 0;
+}
+
+@keyframes load-int {
+  0% { width: 0; }
+  100% { width: 5%; }
+}
+
+.progress-value-str {
+  animation: load-str 3s normal forwards;
+  box-shadow: 0 10px 40px -10px #fff;
+  border-radius: 100px;
+  background: #fff;
+  height: 15px;
+  width: 0;
+}
+
+@keyframes load-str {
+  0% { width: 0; }
+  100% { width: 5%; }
+}
+
+.modal {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-w {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 300px;
+  flex-direction: column;
+  color: white;
+  background: linear-gradient(rgb(71, 71, 71), rgb(0, 0, 0));
+  padding: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  position: fixed;
+  top: 200px;
+  padding-left: 20px;
+}
+
+.modal-w h2 {
+  border-bottom: 2px solid wheat;
+  margin: 5px;
+}
+
+.modal-s {
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-w-s {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 300px;
+  flex-direction: column;
+  color: white;
+  background: linear-gradient(rgb(71, 71, 71), rgb(0, 0, 0));
+  padding: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  position: fixed;
+  top: 200px;
+  padding-left: 10px;
+}
+
+.signup-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  z-index: 9;
+  width: 100%;
+  height: 10000px;
+  background: rgba(0, 0, 0, .8);
+  padding: 10px;
+  padding-left: 10px;
+}
+
+.signup {
+  display: none;
+  width: 300px;
+  flex-direction: column;
+  color: white;
+  background: linear-gradient(rgb(71, 71, 71), rgb(0, 0, 0));
+  padding: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  position: fixed;
+  top: 150px;
+}
+
+.signup button {
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 8px;
+  background: linear-gradient(white, grey);
+  cursor: pointer;
+}
+
+.signup input {
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.signup a {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.login-form {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  z-index: 9;
+  width: 100%;
+  height: 10000px;
+  background: rgba(0, 0, 0, .8);
+  padding: 10px;
+  padding-left: 10px;
+}
+
+.login {
+  display: none;
+  width: 300px;
+  flex-direction: column;
+  color: white;
+  background: linear-gradient(rgb(71, 71, 71), rgb(0, 0, 0));
+  padding: 30px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border: 1px solid black;
+  border-radius: 10px;
+  z-index: 10;
+  position: fixed;
+  top: 150px;
+}
+
+.login button {
+  margin-top: 10px;
+  padding: 5px;
+  border-radius: 8px;
+  background: linear-gradient(white, grey);
+  cursor: pointer;
+}
+
+.login input {
+  margin-bottom: 10px;
+  border-radius: 8px;
+}
+
+.login a {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.dice-menu {
+  cursor: pointer;
+}
+
+.wrapper-dice {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-size: 14px;
+  text-align: center;
+}
+
+.column-dice {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+
+
+.column-dice-stat {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding-right: 25px;
+}
+
+#s-dice {text-align: center;
+  font-size: 15px;
+}
+
+.dice {
+  width: 22px;
+  height: 22px;
+  float: left;
+  background: url(https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/pf-s125-ake7011-a.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=e0614d01434b0078435c9c9b6463c9c1);
+  border: 1px solid black;
+  padding: 5px;
+  font-size: 17px;
+  text-align: center;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.dice-enemy {
+  width: 22px;
+  height: 22px;
+  float: left;
+  background: url(https://images.rawpixel.com/image_800/czNmcy1wcml2YXRlL3Jhd3BpeGVsX2ltYWdlcy93ZWJzaXRlX2NvbnRlbnQvbHIvcm0yMS13b29kLWFlLTUyLWQuanBn.jpg?s=pE6sgMJqoEozrZ4ToPCl-xkLgH7mhnZc99EoecFdoQI);
+  border: 1px solid black;
+  padding: 5px;
+  font-size: 17px;
+  text-align: center;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.dice-roll {
+  cursor: pointer;
+  text-transform: capitalize;
+  margin: 10px;
+  background: rgb(98, 158, 3);
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid black;
+  color: aliceblue;
+}
+
+.dice-roll:hover {
+  background: rgb(47, 151, 26);
+}
+
+.dice-roll:active {
+  background: rgb(31, 104, 17);
+  border: 1px solid black;
+}
+
+.dashboard {
+  display: flex;
+  color: aliceblue;
+  padding-top: 25px;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.dashboard-left {
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 20px;
+  width: 50%;
+}
+
+.dash-tavern {
+  background: url(https://www.scififantasyhorror.co.uk/wp-content/uploads/2015/07/the-art-of-lee-kyonglyol-141.jpg);
+}
+
+.dashboard-tavern {
+  background: rgba(0, 0, 0, .6);
+  display: flex;
+  flex-direction: row;
+  padding-right: 10px;
+  padding-left: 10px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.build {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  font-size: 13px;
+  text-align: center;
+  margin: 5px;
+  width: 140px;
+  height: 140px;
+  border: 1px solid black;
+  background: rgba(0, 0, 0, .8);
+}
+
+.dashboard-tavern p {
+  margin: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.dashboard-tavern h3 {
+  margin-top: 10px;
+  font-size: 12px;
+  background: rgba(0, 0, 0, 1);
+  width: 100%;
+  color: #21b3d2;
+}
+
+.dashboard-tavern button {
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-size: 12px;
+  background: rgba(0, 0, 0, .8);
+  color: #b7e117;
+  border-radius: 3px;
+  border: 1px solid #b7e117;
+}
+
+/* .dashboard-tavern {
+  background: url(https://media.istockphoto.com/photos/dark-moody-medieval-tavern-inn-interior-with-food-and-drink-on-tables-picture-id1380166337?k=20&m=1380166337&s=612x612&w=0&h=iUfUU1BWlMQbaHGBB6VDsJcDaDbvqnXBawrhRe5IXIg=);
+  width: 50%;
+  height: 300px;
+  border-radius: 15px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  opacity: .7;
+  transition: all 1s;
+}
+
+.dashboard-tavern p {
+  padding: 5px;
+  padding-top: 0;
+}
+
+.dashboard-tavern:hover {
+  opacity: 1;
+  transition: all .5s;
+  transform: scale(1.01);
+  z-index: 2;
+}
+
+.dashboard-tavern::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: .5;
+  z-index: -1;
+  position: absolute;
+} */
+
+.dash-smithy {
+  background: center url(https://i.pinimg.com/originals/fd/8a/3c/fd8a3c0f90225f437b620efd8f3020ab.jpg);
+}
+
+.dashboard-smithy {
+  background: rgba(0, 0, 0, .6);
+  display: flex;
+  flex-direction: row;
+  padding-right: 10px;
+  padding-left: 10px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.ships {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  font-size: 13px;
+  text-align: center;
+  margin: 5px;
+  width: 140px;
+  height: 140px;
+  border: 1px solid black;
+  background: rgba(0, 0, 0, .8);
+}
+
+.dashboard-smithy p {
+  margin: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.dashboard-smithy h3 {
+  margin-top: 10px;
+  font-size: 12px;
+  background: rgba(0, 0, 0, 1);
+  width: 100%;
+  color: #d07326;
+}
+
+.dashboard-smithy button {
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-size: 12px;
+  background: rgba(0, 0, 0, .8);
+  color: #b7e117;
+  border-radius: 3px;
+  border: 1px solid #b7e117;
+}
+/* .dashboard-smithy {
+  background: url(https://p4.wallpaperbetter.com/wallpaper/134/872/963/blacksmith-drawing-wallpaper-preview.jpg);
+  width: 50%;
+  height: 300px;
+  border-radius: 15px;
+  position: relative;
+  z-index: 1;
+  opacity: .7;
+  text-align: center;
+  transition: all 1s;
+}
+
+.dashboard-smithy p {
+  padding: 10px;
+}
+
+.dashboard-smithy:hover {
+  opacity: 1;
+  transition: all .5s;
+  transform: scale(1.01);
+  z-index: 2;
+}
+
+.dashboard-smithy::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: .5;
+  z-index: -1;
+  position: absolute;
+} */
+
+.dash-magic {
+  background: center url(https://png.pngtree.com/background/20210709/original/pngtree-light-effect-line-science-fiction-poster-background-intelligent-picture-image_938100.jpg);
+}
+
+.dashboard-magic {
+  background: rgba(0, 0, 0, .6);
+  display: flex;
+  flex-direction: row;
+  padding-right: 10px;
+  padding-left: 10px;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.technology {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  font-size: 13px;
+  text-align: center;
+  margin: 5px;
+  width: 140px;
+  height: 140px;
+  border: 1px solid black;
+  background: rgba(0, 0, 0, .8);
+}
+
+.dashboard-magic p {
+  margin: 0;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.dashboard-magic h3 {
+  margin-top: 10px;
+  font-size: 12px;
+  background: rgba(0, 0, 0, 1);
+  width: 100%;
+  color: #b7e117;
+}
+
+.dashboard-magic button {
+  cursor: pointer;
+  margin-bottom: 10px;
+  font-size: 12px;
+  background: rgba(0, 0, 0, .8);
+  color: #21b3d2;
+  border-radius: 3px;
+  border: 1px solid #21b3d2;
+}
+
+/* .dashboard-magic {
+  background: center url(https://i.pinimg.com/originals/85/3c/b9/853cb944f4ec73935933791beaeb3c01.jpg);
+  width: 50%;
+  background-size: cover;
+  height: 300px;
+  border-radius: 15px;
+  position: relative;
+  z-index: 1;
+  opacity: .7;
+  text-align: center;
+  transition: all 1s;
+}
+
+.dashboard-magic p {
+  padding: 10px;
+}
+
+.dashboard-magic:hover {
+  opacity: 1;
+  transition: all .5s;
+  transform: scale(1.01);
+  z-index: 2;
+}
+
+.dashboard-magic::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: .5;
+  z-index: -1;
+  position: absolute;
+} */
+
+.dash-soldier {
+  background: url(https://www.wallpaperup.com/uploads/wallpapers/2013/12/08/188552/fd3cc4b8f4a3a4bfd503d55cad42b66f-700.jpg);
+}
+
+.dashboard-soldier {
+  background: rgba(0, 0, 0, .6);
+}
+
+.dashboard-soldier p {
+  margin: 0;
+  padding: 10px;
+}
+
+.dashboard-soldier button {
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  font-size: 14px;
+  background: rgba(0, 0, 0, .8);
+  color: #21b3d2;
+  border-radius: 3px;
+  border: 1px solid #21b3d2;
+}
+
+/* .dashboard-soldier {
+  background: center url(https://img5.goodfon.ru/wallpaper/nbig/f/71/eduardo-suarez-garcia-artist-castle-knight-walls-statues-sol.jpg);
+  width: 50%;
+  background-size: cover;
+  height: 300px;
+  border-radius: 15px;
+  position: relative;
+  z-index: 1;
+  opacity: .7;
+  transition: all 1s;
+  text-align: center;
+}
+
+.dashboard-soldier p {
+  padding: 10px;
+}
+
+.dashboard-soldier:hover {
+  opacity: 1;
+  transition: all .5s;
+  transform: scale(1.01);
+  z-index: 2;
+}
+
+.dashboard-soldier::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: .5;
+  z-index: -1;
+  position: absolute;
+} */
+
+.dash-temp {
+  background: center url(https://i.pinimg.com/originals/d6/5a/3f/d65a3f610e29898ec0f65fc566b63a3c.jpg);
+}
+
+.dashboard-temp {
+  background: rgba(0, 0, 0, .6);
+}
+
+.dashboard-temp p {
+  margin: 0;
+  padding: 10px;
+}
+
+.dash-quests {
+  background: url(https://images.unsplash.com/photo-1467646208740-18124b37eb58?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1520&q=80);
+}
+
+.dashboard-quests {
+  background: rgba(0, 0, 0, .6);
+}
+
+.dashboard-quests p {
+  margin: 0;
+  padding: 10px;
+}
+
+.dashboard-quests h3 {
+  margin: 0;
+  padding: 10px;
+}
+
+/* .dashboard-quests {
+  background: url(https://assetstorev1-prd-cdn.unity3d.com/package-screenshot/a690a645-387f-4953-94cc-6060c8af355b_scaled.jpg);
+  width: 100%;
+  height: 300px;
+  border-radius: 15px;
+  position: relative;
+  z-index: 1;
+  opacity: .7;
+  transition: all 1s;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.dashboard-quests:hover {
+  opacity: 1;
+  transition: all .5s;
+  transform: scale(1.01);
+  z-index: 2;
+}
+
+.dashboard-quests::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: .5;
+  z-index: -1;
+  position: absolute;
+} */
+
+.dashboard-right {
+  display: flex;
+  justify-content: start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding-right: 20px;
+  padding-top: 20px;
+  width: 50%;
+}
+
+.dash-stat {
+  background: url(https://w.wallha.com/ws/5/9Olw2aQU.jpg);
+}
+
+.dash-static {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, .6);
+  font-size: 14px;
+}
+
+.dashboard-stat {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 50%;
+  padding-left: 5px;
+}
+
+.dashboard-stat h3 {
+  margin: 0;
+}
+
+.ds-1 {
+  width: 50%;
+}
+
+.ds-2 {
+  width: 50%;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.stat {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 50%;
+  padding-left: 10px;
+  border-left: 1px solid white;
+}
+
+.stat-1 {
+  width: 50%;
+}
+
+.stat-2 {
+  width: 50%;
+  text-align: right;
+}
+
+.stat p {
+  margin: 0;
+}
+
+.stat h3 {
+  margin: 0;
+}
+
+.dash-inventory {
+  background: center url(https://rare-gallery.com/uploads/posts/4549258-halo-video-games-artwork-space-space-art-galaxy-science-fiction-spaceship.jpg);
+}
+
+.inventory {
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  background: rgba(0, 0, 0, .6);
+  font-size: 14px;
+}
+
+.inventory-item {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 30px;
+}
+
+.inventory-item h3 {
+  cursor: alias;
+}
+
+#inventory-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#sale {
+  background: rgb(134, 10, 10);
+  border: none;
+  color: wheat;
+  cursor: pointer;
+}
+
+.equip {
+  background: rgb(21, 105, 4);
+  border: none;
+  color: wheat;
+  cursor: grab;
+}
+
+[data-tooltip] {
+  position: relative; /* Относительное позиционирование */ 
+ }
+ [data-tooltip]::after {
+  content: attr(data-tooltip); /* Выводим текст */
+  position: absolute; /* Абсолютное позиционирование */
+  width: 100px; /* Ширина подсказки */
+  left: 0; bottom: 0; /* Положение подсказки */
+  background: rgb(0, 0, 0); /* Синий цвет фона */
+  color: #b7e117; /* Цвет текста */
+  padding: 0.5em; /* Поля вокруг текста */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Параметры тени */
+  pointer-events: none; /* Подсказка */
+  opacity: 0; /* Подсказка невидима */
+  transition: .5s; /* Время появления подсказки */
+  font-size: 14px;
+  border: 1px solid #21b3d2;
+ } 
+ [data-tooltip]:hover::after {
+  opacity: 1; /* Показываем подсказку */
+  bottom: 1em; /* Положение подсказки */
+  z-index: 5;
+ }
+
+/* .inventory-item button {
+  margin-top: 5px;
+}
+
+.inventory-item h3 {
+  margin-top: 15px;
+} */
+
+.dash-info {
+  background: center url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/9ca8e651-4c2f-4997-b1b5-e2d4ad803853/dfjq0hv-1afcd68f-0135-4a9a-8b8c-5ebcfd9fad69.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcLzljYThlNjUxLTRjMmYtNDk5Ny1iMWI1LWUyZDRhZDgwMzg1M1wvZGZqcTBodi0xYWZjZDY4Zi0wMTM1LTRhOWEtOGI4Yy01ZWJjZmQ5ZmFkNjkucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.-RR4hN4ewCyJ9aa5QhF1rRhRz0qS_KZJZaCR1lQed6g);
+}
+
+.info {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, .6);
+  font-size: 16px;
+  padding-top: 5px;
+}
+
+.info p {
+  margin: 0;
+  margin-bottom: 5px;
+  padding-left: 10px;
+  border-bottom: 1px solid wheat;
+}
+
+#hp {
+  color: rgb(175, 57, 57);
+}
+#mp {
+  color: rgb(86, 86, 202);
+}
+
+/* .dashboard-stat {
+  background: url(https://mir-s3-cdn-cf.behance.net/project_modules/disp/51f94a18789901.562cf57ea9885.jpg);
+  width: 100%;
+  height: 600px;
+  border-radius: 15px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.dashboard-stat::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: .5;
+  z-index: -1;
+  position: absolute;
+}
+
+.dashboard-stat h4 {
+  margin-top: 15px;
+  margin-bottom: 15px;
+} */
+
+/* .dashboard-temp {
+  background: center url(https://thumbs.dreamstime.com/b/fantasy-temple-interior-majestic-pillars-arches-hyper-realistic-d-vitreous-dreamy-atmosphere-follows-image-182240762.jpg);
+  width: 100%;
+  height: 300px;
+  border-radius: 15px;
+  position: relative;
+  z-index: 1;
+  opacity: .7;
+  transition: all 1s;
+  text-align: center;
+}
+
+.dashboard-temp p {
+  padding: 10px;
+}
+
+.dashboard-temp:hover {
+  opacity: 1;
+  transition: all .5s;
+  z-index: 2;
+}
+
+.dashboard-temp::before {
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: .5;
+  z-index: -1;
+  position: absolute;
+} */
+
+@media only screen and (max-width: 600px) {
+  body {
+    padding-right: 10px; 
+    background: fixed url(https://images.unsplash.com/photo-1506443432602-ac2fcd6f54e0?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80);
+  }
+  .dashboard {
+    flex-direction: column;
+  }
+  .dashboard-left {
+    width: 100%;
+    padding: 0;
+  }
+  .dashboard-right {
+    width: 100%;
+  }
+  .modal-w {
+    margin-left: 15px;
+  }
+  .modal-w-s {
+    margin-left: 15px;
+  }
+}

@@ -19,7 +19,9 @@
       <div class="dashboard-left">
         <div class="status-bar">
           <div class="status-bar-in">
-            <h4 id="status-bar">Немає активності...</h4>
+            <h4 id="status-bar"></h4>
+            <h4 id="status-bar-two"></h4>
+            <h4 id="status-bar-three"></h4>
           </div>
         </div>
         <details class="dash-tavern">
@@ -148,9 +150,19 @@
               <h3>Нюхач</h3>
               <p>Дрон-розвідник.</p>
               <div class="cost">
-                <p class="ore-cost">5</p>
-                <p class="min-cost">5</p>
-                <p class="agm-cost">10</p>
+                <p class="ore-cost">50</p>
+                <p class="min-cost">30</p>
+                <p class="agm-cost">50</p>
+              </div>
+              <button class="ship-btn">Будувати</button>
+            </div>
+            <div class="ships">
+              <h3>Майнер</h3>
+              <p>Добуваючий корабель.</p>
+              <div class="cost">
+                <p class="ore-cost">150</p>
+                <p class="min-cost">120</p>
+                <p class="agm-cost">50</p>
               </div>
               <button class="ship-btn">Будувати</button>
             </div>
@@ -158,9 +170,9 @@
               <h3>Свист</h3>
               <p>Корабель з легким озброєнням.</p>
               <div class="cost">
-                <p class="ore-cost">7</p>
-                <p class="min-cost">5</p>
-                <p class="agm-cost">12</p>
+                <p class="ore-cost">756</p>
+                <p class="min-cost">458</p>
+                <p class="agm-cost">212</p>
               </div>
               <button class="ship-btn">Будувати</button>
             </div>
@@ -168,9 +180,9 @@
               <h3>Урук</h3>
               <p>Корабель-камікадзе.</p>
               <div class="cost">
-                <p class="ore-cost">4</p>
-                <p class="min-cost">4</p>
-                <p class="agm-cost">16</p>
+                <p class="ore-cost">300</p>
+                <p class="min-cost">440</p>
+                <p class="agm-cost">1600</p>
               </div>
               <button class="ship-btn ship-five">Будувати</button>
             </div>
@@ -178,9 +190,9 @@
               <h3>Цикада</h3>
               <p>Збалансований середній корабель.</p>
               <div class="cost">
-                <p class="ore-cost">11</p>
-                <p class="min-cost">13</p>
-                <p class="agm-cost">18</p>
+                <p class="ore-cost">1100</p>
+                <p class="min-cost">1345</p>
+                <p class="agm-cost">870</p>
               </div>
               <button class="ship-btn ship-ten">Будувати</button>
             </div>
@@ -188,9 +200,9 @@
               <h3>Молот</h3>
               <p>Корабель для знищення наземних цілей.</p>
               <div class="cost">
-                <p class="ore-cost">27</p>
-                <p class="min-cost">23</p>
-                <p class="agm-cost">31</p>
+                <p class="ore-cost">2700</p>
+                <p class="min-cost">2378</p>
+                <p class="agm-cost">3156</p>
               </div>
               <button class="ship-btn ship-fiveten">Будувати</button>
             </div>
@@ -198,9 +210,9 @@
               <h3>Ярило</h3>
               <p>Флагман флоту.</p>
               <div class="cost">
-                <p class="ore-cost">4523</p>
-                <p class="min-cost">6745</p>
-                <p class="agm-cost">9732</p>
+                <p class="ore-cost">45230</p>
+                <p class="min-cost">67450</p>
+                <p class="agm-cost">97320</p>
               </div>
               <button class="ship-btn ship-twofive">Будувати</button>
             </div>
@@ -213,9 +225,9 @@
               <h3>Синтез АГМ</h3>
               <p>Синтез антигравітаційної матерії.</p>
               <div class="cost">
-                <p class="ore-cost">21</p>
-                <p class="min-cost">25</p>
-                <p class="agm-cost">12</p>
+                <p class="ore-cost">2104</p>
+                <p class="min-cost">2597</p>
+                <p class="agm-cost">1223</p>
               </div>
               <button class="tech-btn">Дослідити</button>
             </div>
@@ -223,9 +235,9 @@
               <h3>Кінетична зброя</h3>
               <p>Легке озброєння.</p>
               <div class="cost">
-                <p class="ore-cost">25</p>
-                <p class="min-cost">21</p>
-                <p class="agm-cost">13</p>
+                <p class="ore-cost">2512</p>
+                <p class="min-cost">2165</p>
+                <p class="agm-cost">1399</p>
               </div>
               <button class="tech-btn">Дослідити</button>
             </div>
@@ -233,9 +245,19 @@
               <h3>Лазерна технологія</h3>
               <p>Зброя 2-го покоління.</p>
               <div class="cost">
-                <p class="ore-cost">22</p>
-                <p class="min-cost">23</p>
-                <p class="agm-cost">18</p>
+                <p class="ore-cost">2267</p>
+                <p class="min-cost">2300</p>
+                <p class="agm-cost">1878</p>
+              </div>
+              <button class="tech-btn">Дослідити</button>
+            </div>
+            <div class="technology">
+              <h3>Вантажні перевезення</h3>
+              <p>Збільшує вантажопідйомність.</p>
+              <div class="cost">
+                <p class="ore-cost">2667</p>
+                <p class="min-cost">2200</p>
+                <p class="agm-cost">1500</p>
               </div>
               <button class="tech-btn">Дослідити</button>
             </div>
@@ -252,15 +274,8 @@
             <button>Відправити експедицію</button>
           </div>
         </details>
-        <details class="dash-temp">
-          <summary>Ресурси</summary>
-          <div class="dashboard-temp">
-            <p>Ресурси</p>
-            <p id="demo-temp"></p>
-            <button id="temp-btn" class="dice-roll">Відвідати Собор</button>
-          </div>
-        </details>
-        <details class="dash-quests">
+
+        <!-- <details class="dash-quests">
           <summary>Завдання</summary>
           <div class="dashboard-quests">
             <div class="quest">
@@ -311,7 +326,7 @@
               </button>
             </div>
           </div>
-        </details>
+        </details> -->
       </div>
       <div class="dashboard-right">
         <details class="dash-stat" open>
@@ -319,47 +334,19 @@
           <div class="dash-static">
             <div class="dashboard-stat">
               <div class="ds-1">
-                <h3>Здоров'я</h3>
-                <h3>Мана</h3>
-                <h3>Персонаж:</h3>
-                <h3>Рівень:</h3>
-                <h3>Досвід:</h3>
-                <h3>Спорядження:</h3>
-                <br />
-                <h3>Золото:</h3>
+                <h3>Руда:</h3>
+                <h3>Мінерали:</h3>
+                <h3>АГМ:</h3>
               </div>
               <div class="ds-2">
-                <h3 id="hp">500 / 500</h3>
-                <h3 id="mp">500 / 500</h3>
-                <h3 id="name-pers-stat">Ім'я</h3>
-                <h3 id="lvl-stat">1 рів.</h3>
-                <h3 id="lvl-exp">Досвід до наступного рівня:</h3>
-                <h3 id="equip-str">Міцність спорядження: 100%</h3>
-                <br />
-                <h3 id="gold-stat">Золото:</h3>
+                <h3 id="stat-ore"></h3>
+                <h3 id="stat-minerals"></h3>
+                <h3 id="stat-agm"></h3>
               </div>
             </div>
             <div class="stat">
-              <div class="stat-1">
-                <h3>Сила:</h3>
-                <h3>Інтелект:</h3>
-                <h3>Спритність:</h3>
-                <h3>Харизма:</h3>
-                <h3>Удача:</h3>
-                <br />
-                <h3>Атака</h3>
-                <h3>Броня</h3>
-              </div>
-              <div class="stat-2">
-                <h3 id="str">10</h3>
-                <h3 id="int">10</h3>
-                <h3 id="agl">10</h3>
-                <h3 id="hrz">10</h3>
-                <h3 id="lck">10</h3>
-                <br />
-                <h3 id="dmg">120</h3>
-                <h3 id="armor">240</h3>
-              </div>
+              <div class="stat-1"></div>
+              <div class="stat-2"></div>
             </div>
           </div>
         </details>

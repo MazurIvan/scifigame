@@ -35,24 +35,30 @@ summary {
   width: 100%;
   height: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
+  justify-content: start;
+  flex-direction: column;
 }
 
 .status-bar-in h4 {
   margin: 0;
+  font-size: 12px;
 }
 
 #res-ore {
   color: #d07326;
   font-weight: bold;
+  font-size: 14px;
 }
 #res-min {
   color: #d633f7;
   font-weight: bold;
+  font-size: 14px;
 }
 #res-agm {
   color: #11e7dc;
   font-weight: bold;
+  font-size: 14px;
 }
 
 .cost {
@@ -79,7 +85,7 @@ summary {
     background: linear-gradient(rgb(114, 114, 114), rgb(19, 19, 19));
     justify-content: space-between;
     align-items: center;
-    height: 25px;
+    height: 30px;
     position: fixed;
     z-index: 3;
     width: 100%;
@@ -528,7 +534,7 @@ summary {
   width: 140px;
   height: 140px;
   border: 1px solid black;
-  background: rgba(0, 0, 0, .8);
+  background: rgba(0, 0, 0, .6);
 }
 
 .dashboard-tavern p {
@@ -616,7 +622,7 @@ summary {
   width: 140px;
   height: 140px;
   border: 1px solid black;
-  background: rgba(0, 0, 0, .8);
+  background: rgba(0, 0, 0, .6);
 }
 
 .dashboard-smithy p {
@@ -702,7 +708,7 @@ summary {
   width: 140px;
   height: 140px;
   border: 1px solid black;
-  background: rgba(0, 0, 0, .8);
+  background: rgba(0, 0, 0, .6);
 }
 
 .dashboard-magic p {
@@ -932,6 +938,12 @@ summary {
   width: 50%;
   text-align: right;
   padding-right: 10px;
+  font-size: 12px;
+  margin-top: 3px;
+}
+
+.ds-2 h3 {
+  margin-top: 1px;
 }
 
 .stat {
@@ -1154,5 +1166,20 @@ summary {
   }
   .modal-w-s {
     margin-left: 15px;
+  }
+  .ds-2 {
+    margin-top: 3px;
+  }
+  .ds-2 h3 {
+    margin-top: 1px;
+  }
+  #res-ore {
+    font-size: 10px;
+  }
+  #res-min {
+    font-size: 10px;
+  }
+  #res-agm {
+    font-size: 10px;
   }
 }

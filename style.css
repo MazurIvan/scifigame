@@ -274,8 +274,8 @@ summary {
   padding: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
-  border: 1px solid black;
-  border-radius: 10px;
+  border: 1px solid #21b3d2;
+  border-radius: 5px;
   z-index: 10;
   position: fixed;
   top: 200px;
@@ -305,8 +305,8 @@ summary {
   padding: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
-  border: 1px solid black;
-  border-radius: 10px;
+  border: 1px solid #21b3d2;
+  border-radius: 5px;
   z-index: 10;
   position: fixed;
   top: 200px;
@@ -336,8 +336,8 @@ summary {
   padding: 30px;
   padding-top: 10px;
   padding-bottom: 10px;
-  border: 1px solid black;
-  border-radius: 10px;
+  border: 1px solid #21b3d2;
+  border-radius: 5px;
   z-index: 10;
   position: fixed;
   top: 150px;
@@ -347,8 +347,10 @@ summary {
   margin-top: 10px;
   padding: 5px;
   border-radius: 8px;
-  background: linear-gradient(white, grey);
+  background: linear-gradient(rgb(31, 31, 31), rgb(0, 0, 0));
+  border: 1px solid #21b3d2;
   cursor: pointer;
+  color: #21b3d2;
 }
 
 .signup input {
@@ -384,8 +386,8 @@ summary {
   padding: 30px;
   padding-top: 10px;
   padding-bottom: 10px;
-  border: 1px solid black;
-  border-radius: 10px;
+  border: 1px solid #21b3d2;
+  border-radius: 5px;
   z-index: 10;
   position: fixed;
   top: 150px;
@@ -395,7 +397,9 @@ summary {
   margin-top: 10px;
   padding: 5px;
   border-radius: 8px;
-  background: linear-gradient(white, grey);
+  background: linear-gradient(rgb(31, 31, 31), rgb(0, 0, 0));
+  border: 1px solid #21b3d2;
+  color: #21b3d2;
   cursor: pointer;
 }
 
@@ -982,6 +986,10 @@ summary {
 
 .stat h3 {
   margin: 0;
+}
+
+.fleet {
+  color: #21b3d2;
 }
 
 .dash-inventory {

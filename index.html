@@ -111,7 +111,7 @@
               <button id="deposit" class="default-btn res">Будувати</button>
             </div>
             <div class="build">
-              <h3 id="plant">Очесний завод</h3>
+              <h3 id="plant-title">Очесний завод</h3>
               <p>Покращує видобуток ресурсів.</p>
               <div class="cost">
                 <p class="ore-cost" id="ore-plant">19</p>
@@ -373,7 +373,17 @@
         <details class="dash-inventory">
           <summary>Сканер</summary>
           <div class="inventory">
-            <div id="inventory-item">Треба: Радарна станція</div>
+            <div id="inventory-item">
+              <div class="scaner">
+                <h3>
+                  Сканування найближчого космосу дозволяє виявляти піратські
+                  флоти, аномалії або астероїди з ресурсами.
+                </h3>
+                <button id="scaning-btn" class="scaner-btn">
+                  Почати сканування
+                </button>
+              </div>
+            </div>
           </div>
         </details>
         <details class="dash-info">
@@ -417,9 +427,10 @@
 
     <div id="modal-s" class="modal-s">
       <div class="modal-w-s" id="modal-w-s">
-        <h2>Інфо</h2>
+        <h2>Флоти:</h2>
+        <p id="report-fleet"></p>
         <p id="report-s">Нічого не відбулось.</p>
-        <button id="report-btn-s" class="dice-roll">Добре</button>
+        <button id="report-btn-s" class="dice-roll">Відправити</button>
       </div>
     </div>
 

@@ -172,18 +172,23 @@ summary {
   padding: 0 5px;
   display: flex;
   height: 20px;
-  width: 300px;
+  width: 90%;
   margin-top: 22px;
   margin-left: 10px;
 }
 
 .progress-value {
-  animation: load 3s normal forwards;
+  animation: load 10s normal forwards;
   box-shadow: 0 10px 40px -10px #fff;
   border-radius: 100px;
-  background: #fff;
+  background: #11e7dc;
   height: 15px;
   width: 0;
+}
+
+@keyframes load {
+  0% { width: 0; }
+  100% { width: 100%; }
 }
 
 .progress-value-lck {
@@ -311,6 +316,15 @@ summary {
   position: fixed;
   top: 200px;
   padding-left: 10px;
+}
+
+.modal-w-s h2 {
+  font-size: 16px;
+  margin: 5px;
+}
+
+.modal-w-s p {
+  margin: 5px;
 }
 
 .signup-form {
@@ -479,20 +493,11 @@ summary {
   cursor: pointer;
   text-transform: capitalize;
   margin: 10px;
-  background: rgb(98, 158, 3);
+  background: black;
   padding: 5px;
   border-radius: 5px;
-  border: 1px solid black;
+  border: 1px solid #21b3d2;
   color: aliceblue;
-}
-
-.dice-roll:hover {
-  background: rgb(47, 151, 26);
-}
-
-.dice-roll:active {
-  background: rgb(31, 104, 17);
-  border: 1px solid black;
 }
 
 .dashboard {
@@ -1025,6 +1030,14 @@ summary {
   color: #21b3d2;
   border-radius: 3px;
   border: 1px solid #21b3d2;
+}
+
+#mining-btn {
+  display: none;
+}
+
+#mining-repeat-btn {
+  display: none;
 }
 
 .inventory-item h3 {

@@ -22,6 +22,7 @@
             <h4 id="status-bar"></h4>
             <h4 id="status-bar-two"></h4>
             <h4 id="status-bar-three"></h4>
+            <h4 id="status-bar-four"></h4>
           </div>
         </div>
         <details class="dash-tavern">
@@ -52,7 +53,7 @@
                 <p class="ore-cost" id="ore-science">12</p>
                 <p class="min-cost" id="min-science">14</p>
               </div>
-              <button id="science" class="default-btn">Будувати</button>
+              <button id="science" class="default-btn res">Будувати</button>
             </div>
             <div class="build">
               <h3 id="factory-title">Фабрика</h3>
@@ -154,7 +155,7 @@
                 <p class="min-cost">30</p>
                 <p class="agm-cost">50</p>
               </div>
-              <button class="ship-btn">Будувати</button>
+              <button id="build-nuhach" class="ship-btn">Будувати</button>
             </div>
             <div class="ships">
               <h3>Майнер</h3>
@@ -164,7 +165,7 @@
                 <p class="min-cost">120</p>
                 <p class="agm-cost">50</p>
               </div>
-              <button class="ship-btn">Будувати</button>
+              <button id="build-miner" class="ship-btn">Будувати</button>
             </div>
             <div class="ships">
               <h3>Свист</h3>
@@ -174,7 +175,7 @@
                 <p class="min-cost">458</p>
                 <p class="agm-cost">212</p>
               </div>
-              <button class="ship-btn">Будувати</button>
+              <button id="build-svist" class="ship-btn">Будувати</button>
             </div>
             <div class="ships">
               <h3>Урук</h3>
@@ -184,7 +185,9 @@
                 <p class="min-cost">440</p>
                 <p class="agm-cost">1600</p>
               </div>
-              <button class="ship-btn ship-five">Будувати</button>
+              <button id="build-uruk" class="ship-btn ship-five">
+                Будувати
+              </button>
             </div>
             <div class="ships">
               <h3>Цикада</h3>
@@ -194,7 +197,9 @@
                 <p class="min-cost">1345</p>
                 <p class="agm-cost">870</p>
               </div>
-              <button class="ship-btn ship-ten">Будувати</button>
+              <button id="build-cikada" class="ship-btn ship-ten">
+                Будувати
+              </button>
             </div>
             <div class="ships">
               <h3>Молот</h3>
@@ -204,7 +209,9 @@
                 <p class="min-cost">2378</p>
                 <p class="agm-cost">3156</p>
               </div>
-              <button class="ship-btn ship-fiveten">Будувати</button>
+              <button id="build-molot" class="ship-btn ship-fiveten">
+                Будувати
+              </button>
             </div>
             <div class="ships">
               <h3>Ярило</h3>
@@ -214,7 +221,9 @@
                 <p class="min-cost">67450</p>
                 <p class="agm-cost">97320</p>
               </div>
-              <button class="ship-btn ship-twofive">Будувати</button>
+              <button id="build-yarilo" class="ship-btn ship-twofive">
+                Будувати
+              </button>
             </div>
           </div>
         </details>
@@ -225,15 +234,15 @@
               <h3>Синтез АГМ</h3>
               <p>Синтез антигравітаційної матерії.</p>
               <div class="cost">
-                <p class="ore-cost">2104</p>
-                <p class="min-cost">2597</p>
-                <p class="agm-cost">1223</p>
+                <p class="ore-cost">104</p>
+                <p class="min-cost">597</p>
+                <p class="agm-cost">223</p>
               </div>
               <button class="tech-btn">Дослідити</button>
             </div>
             <div class="technology">
               <h3>Кінетична зброя</h3>
-              <p>Легке озброєння.</p>
+              <p>Озброєння кораблів.</p>
               <div class="cost">
                 <p class="ore-cost">2512</p>
                 <p class="min-cost">2165</p>
@@ -242,12 +251,12 @@
               <button class="tech-btn">Дослідити</button>
             </div>
             <div class="technology">
-              <h3>Лазерна технологія</h3>
-              <p>Зброя 2-го покоління.</p>
+              <h3>Вивчення аномалій</h3>
+              <p>Аналізує аномалії.</p>
               <div class="cost">
-                <p class="ore-cost">2267</p>
-                <p class="min-cost">2300</p>
-                <p class="agm-cost">1878</p>
+                <p class="ore-cost">4267</p>
+                <p class="min-cost">3300</p>
+                <p class="agm-cost">2878</p>
               </div>
               <button class="tech-btn">Дослідити</button>
             </div>
@@ -388,7 +397,33 @@
         </details>
         <details class="dash-info">
           <summary>Інформація</summary>
-          <div class="info"></div>
+          <div class="info">
+            <h3>
+              <span>Руда</span> - найчастіше зустрічаємий вид ресурсів. Потрібен
+              як для будівництва інфраструктури, так і для кораблів та
+              дослідження технологій.
+            </h3>
+            <h3>
+              <span>Мінерали</span> - ресурс зустрічається рідше, і добувати
+              його важче, тому витрачайте його з розумом.
+            </h3>
+            <h3>
+              <span>АГМ</span> - Антигравітаційна матерія - використувується як
+              "паливо". Добувається в колайдері методом розщеплення і
+              зіштовхування елементарних часток.
+            </h3>
+            <h3>
+              Сила флоту - (цифра в дужках біля вашого ніку) показує сумарну
+              потужність ваших кораблів. На цей показник бажано орієнтуватись
+              перед битвами з піратським флотом, щоб розрахувати свої сили.
+            </h3>
+            <h3>
+              Сканування - сканування космосу допоможе ван накопичити ресурси на
+              початковій стадії гри, знаходячи астероїди з рудою та мінералами.
+              Але для цього потрібно побудувати Радарну станцію(Рекомендується
+              робити це в першу чергу, як тільки вона відкриється).
+            </h3>
+          </div>
         </details>
       </div>
     </div>
@@ -434,11 +469,11 @@
       </div>
     </div>
 
-    <div id="modal-inventory" class="modal">
-      <div class="modal-w" id="modal-w-inventory">
-        <h2>Інвентар</h2>
-        <p>Пусто</p>
-        <button id="inventory-btn" class="dice-roll">Добре</button>
+    <div id="modal-build-ship" class="modal">
+      <div class="modal-w" id="modal-w-build-ship">
+        <h2>Черга кораблів:</h2>
+        <input type="number" id="input-nuhach" />
+        <button id="build-ship-btn" class="dice-roll">Будувати</button>
       </div>
     </div>
 

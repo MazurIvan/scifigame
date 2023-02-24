@@ -19,10 +19,22 @@
       <div class="dashboard-left">
         <div class="status-bar">
           <div class="status-bar-in">
-            <h4 id="status-bar"></h4>
-            <h4 id="status-bar-two"></h4>
-            <h4 id="status-bar-three"></h4>
-            <h4 id="status-bar-four"></h4>
+            <div class="status-timer">
+              <p>Будівництво</p>
+              <h4 id="status-bar"></h4>
+            </div>
+            <div class="status-timer">
+              <p>Флот</p>
+              <h4 id="status-bar-two"></h4>
+            </div>
+            <div class="status-timer">
+              <p>Верф</p>
+              <h4 id="status-bar-three"></h4>
+            </div>
+            <div class="status-timer">
+              <p>Дослідження</p>
+              <h4 id="status-bar-four"></h4>
+            </div>
           </div>
         </div>
         <details class="dash-tavern">
@@ -238,7 +250,7 @@
                 <p class="min-cost">597</p>
                 <p class="agm-cost">223</p>
               </div>
-              <button class="tech-btn">Дослідити</button>
+              <button id="tech-agm" class="tech-btn">Дослідити</button>
             </div>
             <div class="technology">
               <h3>Кінетична зброя</h3>
@@ -248,7 +260,7 @@
                 <p class="min-cost">2165</p>
                 <p class="agm-cost">1399</p>
               </div>
-              <button class="tech-btn">Дослідити</button>
+              <button id="tech-weapon" class="tech-btn">Дослідити</button>
             </div>
             <div class="technology">
               <h3>Вивчення аномалій</h3>
@@ -258,7 +270,7 @@
                 <p class="min-cost">3300</p>
                 <p class="agm-cost">2878</p>
               </div>
-              <button class="tech-btn">Дослідити</button>
+              <button id="tech-anomaly" class="tech-btn">Дослідити</button>
             </div>
             <div class="technology">
               <h3>Вантажні перевезення</h3>
@@ -268,7 +280,7 @@
                 <p class="min-cost">2200</p>
                 <p class="agm-cost">1500</p>
               </div>
-              <button class="tech-btn">Дослідити</button>
+              <button id="tech-cargo" class="tech-btn">Дослідити</button>
             </div>
           </div>
         </details>

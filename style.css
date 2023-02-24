@@ -16,8 +16,6 @@ details {
   transition: all .5s ease;
 }
 
-
-
 summary {
   cursor: pointer;
   padding: 5px;
@@ -46,6 +44,36 @@ summary {
   margin: 5px;
   margin-left: 30px;
   font-size: 12px;
+}
+
+.status-timer {
+  border: 1px solid grey;
+  width: 100%;
+  box-shadow: 0 0 0 0 #00ffff;
+  animation: pulse 5s ease-in-out infinite;
+  cursor: pointer;
+}
+
+.status-timer:hover {
+  border: 1px solid #00ffff;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 #00ffff;
+  }
+  50% {
+    box-shadow: 0 0 0 1px #00ffff;
+  }
+  100% {
+    box-shadow: 0 0 0 0 #00ffff;
+  }
+}
+
+.status-timer p {
+  margin: 0;
+  font-size: 10px;
+  color: #fff;
 }
 
 #res-ore {
@@ -1217,6 +1245,9 @@ summary {
   }
   .dashboard-right {
     width: 100%;
+  }
+  .dashboard-stat h3 {
+    font-size: 12px;
   }
   .modal-w {
     margin-left: 15px;

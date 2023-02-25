@@ -1074,6 +1074,10 @@ summary {
   display: none;
 }
 
+#mining-pirat-btn {
+  display: none;
+}
+
 .inventory-item h3 {
   cursor: alias;
 }
@@ -1239,6 +1243,9 @@ summary {
   .dashboard {
     flex-direction: column;
   }
+  .status-bar {
+    margin-top: 10px;
+  }
   .dashboard-left {
     width: 100%;
     padding: 0;
@@ -1247,6 +1254,12 @@ summary {
     width: 100%;
   }
   .dashboard-stat h3 {
+    font-size: 12px;
+  }
+  .stat-1 h3 {
+    font-size: 12px;
+  }
+  .stat-2 h3 {
     font-size: 12px;
   }
   .modal-w {
